@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinesWeeper.MainPage"
+             WidthRequest="1080"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <Grid x:Name="grid" RowSpacing="{OnPlatform Android='25'}"
+              Padding="7,10,10,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions >
+        <StackLayout Orientation="Horizontal" Margin="1">
+            <Button x:Name="flag" Text="🚩" HeightRequest="40" WidthRequest="40" Clicked="flag_Clicked"/>
+            <Label Text="列" VerticalTextAlignment="Center" HeightRequest="40" Margin="10,0,0,0" />
+            <Entry x:Name="e_col" WidthRequest="80" HeightRequest="40" Margin="10,0,0,0"/>
+            <Label Text="行" VerticalTextAlignment="Center" HeightRequest="40" Margin="10,0,0,0"/>
+            <Entry x:Name="e_row" WidthRequest="80" HeightRequest="40" Margin="10,0,0,0" />
+            <Button x:Name="restart" Text="重新开始" HeightRequest="40" Margin="10,0,0,0" Clicked="restart_Clicked"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Orientation="Vertical" WidthRequest="1080" x:Name="sl2">
+        </StackLayout>
+        <StackLayout Grid.Row="1" Orientation="Vertical" WidthRequest="1080" x:Name="sl_flag">
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Orientation="Vertical" WidthRequest="1080" x:Name="sl">
+        </StackLayout>
+    </Grid>
+</ContentPage>
